@@ -7,8 +7,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ext .ts,.vue --config .eslintrc",
+    "lint:fix": "eslint . --ext .ts,.vue --config .eslintrc --fix",
     "lint:config": "eslint --config .eslintrc --print-config .eslintrc"
   },
   "devDependencies": {

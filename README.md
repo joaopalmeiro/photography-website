@@ -28,7 +28,6 @@ npm run dev -- -o
 - https://nuxt.com/docs/examples/hello-world
 - https://github.com/nuxt-modules/eslint
 - https://tailwindcss.com/docs/guides/nuxtjs#3
-- https://tailwindcss.nuxtjs.org/examples/nuxtlabs-ui
 - https://nuxt.com/modules
 - https://github.com/nuxt/eslint-config
 - https://github.com/nuxt/eslint-plugin-nuxt
@@ -37,5 +36,14 @@ npm run dev -- -o
 - https://eslint.org/docs/latest/use/configure/configuration-files
 - https://github.com/nuxt/eslint-config/tree/main/packages/eslint-config-legacy
 - https://github.com/nuxt/eslint-config/tree/main/packages/eslint-config-legacy-typescript
-- https://github.com/nuxt/content/blob/main/.eslintrc
+- https://github.com/nuxt/content/blob/main/.eslintrc + https://github.com/nuxt/content/blob/main/package.json + https://github.com/nuxt/image/blob/main/package.json
 - https://ui.nuxtlabs.com/getting-started
+- https://tailwindcss.nuxtjs.org/examples/nuxtlabs-ui
+- https://www.npmjs.com/package/eslint-plugin-tailwindcss
+- https://tailwindcss.com/docs/translate#hardware-acceleration
+- https://heroicons.com/
+- https://lucide.dev/
+- https://nuxt.com/modules/icons
+- https://tailwindui.com/
+- https://headlessui.com/
+- https://www.anron.pro/
