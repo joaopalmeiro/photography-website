@@ -9,10 +9,11 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:config": "eslint --config .eslintrc.cjs --print-config .eslintrc.cjs"
+    "lint:config": "eslint --config .eslintrc --print-config .eslintrc"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.1.1",
+    "@nuxtjs/eslint-config-typescript": "12.0.0",
+    "@nuxtjs/tailwindcss": "6.8.0",
     "eslint": "8.44.0",
     "eslint-plugin-nuxt": "4.0.0",
     "nuxt": "3.6.1"
