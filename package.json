@@ -1,0 +1,20 @@
+{
+  "name": "photography-website",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:config": "eslint --config .eslintrc.cjs --print-config .eslintrc.cjs"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "0.1.1",
+    "eslint": "8.44.0",
+    "eslint-plugin-nuxt": "4.0.0",
+    "nuxt": "3.6.1"
+  }
+}
