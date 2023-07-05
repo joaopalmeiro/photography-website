@@ -47,3 +47,4 @@ npm run dev -- -o
 - https://tailwindui.com/
 - https://headlessui.com/
 - https://www.anron.pro/
+- https://www.adobe.com/express/discover/sizes/photo-aspect-ratio
