@@ -12,6 +12,7 @@
     "lint:config": "eslint --config .eslintrc --print-config .eslintrc"
   },
   "devDependencies": {
+    "@nuxt/image": "1.0.0-rc.1",
     "@nuxtjs/eslint-config-typescript": "12.0.0",
     "@nuxtjs/tailwindcss": "6.8.0",
     "eslint": "8.44.0",

@@ -1,9 +1,13 @@
 <!-- https://nuxt.com/docs/api/components/nuxt-link -->
 
+<script setup lang="ts">
+const { instagram } = useAppConfig()
+</script>
+
 <template>
   <h1>João Palmeiro</h1>
 
-  <NuxtLink to="https://www.instagram.com/joaompalmeiro/" target="_blank">
+  <NuxtLink :to="instagram" target="_blank" class="cursor-alias">
     Follow me
   </NuxtLink>
 </template>

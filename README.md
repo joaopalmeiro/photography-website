@@ -22,6 +22,7 @@ npm run dev -- -o
 - https://nuxt.com/docs/getting-started/installation
 - `rm -rf node_modules/ .nuxt`
 - `npm install -D nuxt @nuxtjs/eslint-config-typescript eslint-plugin-nuxt eslint @nuxtjs/tailwindcss`
+- `npm install -D @nuxt/image@rc`
 - https://nuxt.com/docs/api/commands/prepare
 - https://nuxt.com/docs/guide/directory-structure/server
 - https://github.com/c1llo/gallery
