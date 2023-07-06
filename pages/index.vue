@@ -18,6 +18,7 @@ const numberPhotos = 5
         class="grid grid-cols-6 gap-2"
       >
         <CollectionTitle :title="name" :to="`/${slug}/${photos[0].id}`" />
+
         <template v-if="photos.length <= numberPhotos">
           <CollectionCard
             v-for="{ id, src } in photos"
@@ -26,6 +27,7 @@ const numberPhotos = 5
             :to="`/${slug}/${id}`"
           />
         </template>
+
         <template v-else>
           <CollectionCard
             v-for="{ id, src } in photos.slice(0, numberPhotos - 1)"
@@ -34,8 +36,8 @@ const numberPhotos = 5
             :to="`/${slug}/${id}`"
           />
           <CollectionCard
-            :src="photos[numberPhotos].src"
-            :to="`/${slug}/${photos[numberPhotos].id}`"
+            :src="photos[numberPhotos - 1].src"
+            :to="`/${slug}/${photos[numberPhotos - 1].id}`"
             :extra-count="photos.length - numberPhotos"
           />
         </template>

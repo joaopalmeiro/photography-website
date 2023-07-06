@@ -9,6 +9,7 @@
 <!-- https://placehold.co/600x400 -->
 <!-- https://github.com/c1llo/gallery/blob/main/src/pages/index.vue -->
 <!-- https://vuejs.org/guide/essentials/computed.html#basic-example -->
+<!-- https://router.vuejs.org/api/interfaces/RouteLocation.html -->
 
 <script setup lang="ts">
 const props = defineProps<{
