@@ -1,17 +1,44 @@
 <!-- https://github.com/c1llo/gallery/blob/main/src/pages/index.vue -->
+<!-- https://github.com/c1llo/gallery/blob/main/src/composables/useImages.ts -->
+
+<script setup lang="ts">
+const { collections } = useAppConfig()
+
+const numberPhotos = 5
+</script>
 
 <template>
   <div class="max-w-screen-xl mx-auto px-4">
     <ProfileHeader />
 
     <main>
-      <div class="grid grid-cols-6 gap-2">
-        <CollectionTitle title="Black & Night" />
-        <CollectionCard />
-        <CollectionCard />
-        <CollectionCard />
-        <CollectionCard />
-        <CollectionCard :extra-count="5" />
+      <div
+        v-for="{ name, slug, photos } in collections"
+        :key="name"
+        class="grid grid-cols-6 gap-2"
+      >
+        <CollectionTitle :title="name" :to="`/${slug}/${photos[0].id}`" />
+        <template v-if="photos.length <= numberPhotos">
+          <CollectionCard
+            v-for="{ id, src } in photos"
+            :key="id"
+            :src="src"
+            :to="`/${slug}/${id}`"
+          />
+        </template>
+        <template v-else>
+          <CollectionCard
+            v-for="{ id, src } in photos.slice(0, numberPhotos - 1)"
+            :key="id"
+            :src="src"
+            :to="`/${slug}/${id}`"
+          />
+          <CollectionCard
+            :src="photos[numberPhotos].src"
+            :to="`/${slug}/${photos[numberPhotos].id}`"
+            :extra-count="photos.length - numberPhotos"
+          />
+        </template>
       </div>
     </main>
   </div>

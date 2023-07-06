@@ -12,7 +12,9 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  extraCount?: number
+  src: string;
+  to: string;
+  extraCount?: number;
 }>()
 
 const extraCountLabel = computed(() => {
@@ -21,8 +23,8 @@ const extraCountLabel = computed(() => {
 </script>
 
 <template>
-  <NuxtLink to="/p" class="cursor-zoom-in grid">
-    <NuxtImg src="https://placehold.co/600x400" class="col-span-full row-span-full" />
+  <NuxtLink :to="to" class="cursor-zoom-in grid">
+    <NuxtImg :src="src" class="col-span-full row-span-full" />
 
     <div v-if="extraCount" class="col-span-full row-span-full">
       {{ extraCountLabel }}

@@ -3,5 +3,8 @@
   "extends": [
     "@nuxtjs/eslint-config-typescript",
     "plugin:nuxt/recommended"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/member-delimiter-style": "error"
+  }
 }
