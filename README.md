@@ -49,3 +49,6 @@ npm run dev -- -o
 - https://headlessui.com/
 - https://www.anron.pro/
 - https://www.adobe.com/express/discover/sizes/photo-aspect-ratio
+- https://vercel.com/docs/cli/deploying-from-cli
+- https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
+- https://www.npmjs.com/package/lucide-vue-next?activeTab=code

@@ -5,9 +5,11 @@
     <ProfileHeader />
 
     <div class="grid grid-cols-6 gap-2">
-      <div>
-        <h2>Black & Night</h2>
-      </div>
+      <NuxtLink to="/p" class="cursor-zoom-in">
+        <div>
+          <h2>Black & Night</h2>
+        </div>
+      </NuxtLink>
       <CollectionCard />
       <CollectionCard />
       <CollectionCard />
