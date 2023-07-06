@@ -16,6 +16,10 @@ npm install
 npm run dev -- -o
 ```
 
+```bash
+npx nuxi typecheck
+```
+
 ## Notes
 
 - https://github.com/Schniz/fnm
@@ -52,3 +56,5 @@ npm run dev -- -o
 - https://vercel.com/docs/cli/deploying-from-cli
 - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
 - https://www.npmjs.com/package/lucide-vue-next?activeTab=code
+- https://nuxt.com/docs/guide/concepts/typescript
+- https://eslint.vuejs.org/rules/multi-word-component-names.html + https://github.com/nuxt/content/blob/main/.eslintrc + https://github.com/nuxt/eslint-plugin-nuxt/issues/189

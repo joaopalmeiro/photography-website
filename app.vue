@@ -1,17 +1,11 @@
 <!-- https://www.hyperui.dev/blog/how-to-write-better-containers-in-tailwindcss -->
 <!-- https://css-tricks.com/link-header-header-link/ -->
+<!-- https://nuxt.com/docs/guide/directory-structure/app#usage-with-pages -->
+<!-- https://github.com/c1llo/gallery/blob/main/src/app.vue -->
+<!-- https://nuxt.com/docs/guide/directory-structure/layouts#enabling-the-default-layout -->
 
 <template>
-  <div class="max-w-screen-xl mx-auto px-4">
-    <ProfileHeader />
-
-    <div class="grid grid-cols-6 gap-2">
-      <CollectionTitle title="Black & Night" />
-      <CollectionCard />
-      <CollectionCard />
-      <CollectionCard />
-      <CollectionCard />
-      <CollectionCard :extra-count="5" />
-    </div>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

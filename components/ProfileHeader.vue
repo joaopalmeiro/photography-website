@@ -5,9 +5,11 @@ const { instagram } = useAppConfig()
 </script>
 
 <template>
-  <h1>João Palmeiro</h1>
+  <header>
+    <h1>João Palmeiro</h1>
 
-  <NuxtLink :to="instagram" target="_blank" class="cursor-alias">
-    Follow me
-  </NuxtLink>
+    <NuxtLink :to="instagram" target="_blank" class="cursor-alias">
+      Follow me
+    </NuxtLink>
+  </header>
 </template>

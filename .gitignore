@@ -2,4 +2,6 @@ node_modules/
 dist/
 .DS_Store
 
+# https://nuxt.com/docs/guide/directory-structure/gitignore
 .nuxt/
+.output/
