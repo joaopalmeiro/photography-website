@@ -8,7 +8,7 @@ const numberPhotos = 5
 </script>
 
 <template>
-  <div class="max-w-screen-xl mx-auto px-4">
+  <div class="mx-auto max-w-screen-xl px-4">
     <ProfileHeader />
 
     <main>

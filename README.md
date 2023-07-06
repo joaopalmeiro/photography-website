@@ -29,6 +29,7 @@ npx nuxi typecheck
 - `npm install -D @nuxt/image@rc`
 - `npm install slugify`
 - `npm install -D slugify`
+- `npm i -D eslint-plugin-tailwindcss`
 - https://nuxt.com/docs/api/commands/prepare
 - https://nuxt.com/docs/guide/directory-structure/server
 - https://github.com/c1llo/gallery
@@ -61,3 +62,4 @@ npx nuxi typecheck
 - https://nuxt.com/docs/guide/concepts/typescript
 - https://eslint.vuejs.org/rules/multi-word-component-names.html + https://github.com/nuxt/content/blob/main/.eslintrc + https://github.com/nuxt/eslint-plugin-nuxt/issues/189
 - https://github.com/nuxt/nuxt/issues/6830
+- https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/master/docs/rules/classnames-order.md

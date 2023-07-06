@@ -7,6 +7,7 @@ import slugify from 'slugify'
 
 interface Photo {
   src: string;
+  location: string;
 }
 
 interface Collection {
@@ -19,22 +20,28 @@ const collections: Collection[] = [
     name: 'Black & Night',
     photos: [
       {
-        src: 'https://placehold.co/600x400'
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal'
       },
       {
-        src: 'https://placehold.co/600x400'
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal'
       },
       {
-        src: 'https://placehold.co/600x400'
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal'
       },
       {
-        src: 'https://placehold.co/600x400'
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal'
       },
       {
-        src: 'https://placehold.co/600x400'
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal'
       },
       {
-        src: 'https://placehold.co/600x400'
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal'
       }
     ]
   }

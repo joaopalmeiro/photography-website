@@ -24,7 +24,7 @@ const extraCountLabel = computed(() => {
 </script>
 
 <template>
-  <NuxtLink :to="to" class="cursor-zoom-in grid">
+  <NuxtLink :to="to" class="grid cursor-zoom-in">
     <NuxtImg :src="src" class="col-span-full row-span-full" />
 
     <div v-if="extraCount" class="col-span-full row-span-full">
