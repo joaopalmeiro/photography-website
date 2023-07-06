@@ -1,6 +1,11 @@
 <!-- https://gallery-nuxt.vercel.app/ -->
+<!-- https://nuxt.com/docs/api/utils/navigate-to -->
+<!-- https://nuxt.com/docs/api/composables/use-router#based-on-history-api -->
+<!-- https://github.com/c1llo/gallery/blob/main/src/composables/useGalleryNavigation.ts -->
 
 <script setup lang="ts">
+import { onKeyStroke } from '@vueuse/core'
+
 const route = useRoute()
 const { collections } = useAppConfig()
 
@@ -17,6 +22,24 @@ const currentPhotoSrc = currentPhoto?.src
 const currentPhotoLocation = currentPhoto?.location
 
 const pagination = `${route.params.id} of ${numberPhotos}`
+
+const PREV_NAVIGATION_KEYS = ['ArrowLeft', 'ArrowUp', 'a', 'A', 'w', 'W']
+const NEXT_NAVIGATION_KEYS = ['ArrowRight', 'ArrowDown', 'd', 'D', 's', 'S']
+
+onKeyStroke(PREV_NAVIGATION_KEYS, async () => {
+  if (numberPhotos && currentPhoto) {
+    const newId = 2
+
+    await navigateTo(`/${route.params.collection}/${newId}`)
+  }
+})
+onKeyStroke(NEXT_NAVIGATION_KEYS, async () => {
+  if (numberPhotos && currentPhoto) {
+    const newId = 5
+
+    await navigateTo(`/${route.params.collection}/${newId}`)
+  }
+})
 </script>
 
 <template>

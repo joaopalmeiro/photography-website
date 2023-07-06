@@ -29,7 +29,8 @@ npx nuxi typecheck
 - `npm install -D @nuxt/image@rc`
 - `npm install slugify`
 - `npm install -D slugify`
-- `npm i -D eslint-plugin-tailwindcss`
+- `npm install -D eslint-plugin-tailwindcss`
+- `npm install @vueuse/core`
 - https://nuxt.com/docs/api/commands/prepare
 - https://nuxt.com/docs/guide/directory-structure/server
 - https://github.com/c1llo/gallery
