@@ -64,3 +64,9 @@ npx nuxi typecheck
 - https://eslint.vuejs.org/rules/multi-word-component-names.html + https://github.com/nuxt/content/blob/main/.eslintrc + https://github.com/nuxt/eslint-plugin-nuxt/issues/189
 - https://github.com/nuxt/nuxt/issues/6830
 - https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/master/docs/rules/classnames-order.md
+- https://knowledge.evinced.com/elements/landmarks/aside + https://imgs.so/posts/39345d
+- https://github.com/nuxt-modules/fontaine
+- https://tailwindui.com/documentation
+- https://github.com/evilmartians/mono + https://github.com/evilmartians/mono/releases
+- https://rsms.me/inter + https://github.com/rsms/inter/releases
+- https://evilmartians.com/chronicles/the-joy-of-variable-fonts-getting-started-on-the-frontend

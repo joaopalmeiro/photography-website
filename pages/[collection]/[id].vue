@@ -5,6 +5,7 @@
 <!-- https://stackoverflow.com/questions/63244683/detecting-whether-a-click-has-been-made-to-the-left-side-or-on-the-right-side-of -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth -->
+<!-- https://devhints.io/wip/intl-datetime -->
 
 <script setup lang="ts">
 import { onKeyStroke } from '@vueuse/core'
@@ -12,9 +13,17 @@ import { onKeyStroke } from '@vueuse/core'
 const route = useRoute()
 const { collections } = useAppConfig()
 
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: '2-digit'
+})
+
 const currentCollection = collections.find(
   collection => collection.slug === route.params.collection
 )
+
+const currentCollectionName = currentCollection?.name
 const numberPhotos = currentCollection?.photos.length
 
 const currentPhoto = currentCollection?.photos.find(
@@ -23,6 +32,7 @@ const currentPhoto = currentCollection?.photos.find(
 
 const currentPhotoSrc = currentPhoto?.src
 const currentPhotoLocation = currentPhoto?.location
+const currentPhotoDate = dateFormatter.format(currentPhoto?.date)
 
 const pagination = `${route.params.id} of ${numberPhotos}`
 
@@ -53,14 +63,16 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 </script>
 
 <template>
-  <div class="flex h-screen items-center justify-center">
-    <div class="flex flex-col items-center gap-4">
-      <NuxtImg :src="currentPhotoSrc" />
+  <div class="flex h-screen flex-row gap-2">
+    <div class="flex flex-col self-end">
+      <span>{{ currentCollectionName }}</span>
+      <span>{{ currentPhotoLocation }}</span>
+      <span>{{ currentPhotoDate }}</span>
+      <span class="font-mono">{{ pagination }}</span>
+    </div>
 
-      <div class="flex w-full flex-row justify-between">
-        <span>{{ currentPhotoLocation }}</span>
-        <span>{{ pagination }}</span>
-      </div>
+    <div class="flex w-full flex-row items-center justify-center">
+      <NuxtImg :src="currentPhotoSrc" />
     </div>
   </div>
 </template>

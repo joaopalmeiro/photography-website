@@ -4,6 +4,7 @@
 <script setup lang="ts">
 const { collections } = useAppConfig()
 
+// console.log(JSON.stringify(collections, null, 2))
 const numberPhotos = 5
 </script>
 

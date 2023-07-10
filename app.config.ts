@@ -2,12 +2,18 @@
 // https://github.com/Atinux/content-wind/blob/main/app.config.ts
 // https://nuxt.com/docs/api/composables/use-app-config
 // https://github.com/Atinux/content-wind/blob/main/components/AppLayout.vue
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
 
 import slugify from 'slugify'
+
+function m (month: number): number {
+  return month - 1
+}
 
 interface Photo {
   src: string;
   location: string;
+  date: Date;
 }
 
 interface Collection {
@@ -21,27 +27,33 @@ const collections: Collection[] = [
     photos: [
       {
         src: 'https://placehold.co/600x400',
-        location: 'Lisbon, Portugal'
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
         src: 'https://placehold.co/600x400',
-        location: 'Lisbon, Portugal'
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
         src: 'https://placehold.co/600x400',
-        location: 'Lisbon, Portugal'
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
         src: 'https://placehold.co/600x400',
-        location: 'Lisbon, Portugal'
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
         src: 'https://placehold.co/600x400',
-        location: 'Lisbon, Portugal'
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
         src: 'https://placehold.co/600x400',
-        location: 'Lisbon, Portugal'
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       }
     ]
   }
