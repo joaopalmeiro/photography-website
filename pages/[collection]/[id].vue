@@ -11,6 +11,8 @@
 <!-- https://image.nuxtjs.org/configuration#screens -->
 <!-- https://sharp.pixelplumbing.com/api-output#webp -->
 <!-- https://stackoverflow.com/questions/15295697/make-an-image-to-fit-its-parent-dimensions -->
+<!-- https://nuxt.com/docs/api/utils/create-error -->
+<!-- https://github.com/c1llo/gallery/blob/main/src/layouts/gallery.vue#L18 -->
 
 <script setup lang="ts">
 import { onKeyStroke } from '@vueuse/core'
@@ -34,6 +36,10 @@ const numberPhotos = currentCollection?.photos.length
 const currentPhoto = currentCollection?.photos.find(
   photo => photo.id.toString() === route.params.id
 )
+
+if (!currentPhoto) {
+  throw createError({ statusCode: 404, message: 'Photo not found', fatal: true })
+}
 
 const currentPhotoSrc = currentPhoto?.src
 const currentPhotoLocation = currentPhoto?.location
@@ -69,15 +75,21 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 
 <template>
   <div class="flex h-screen flex-row gap-2">
+    <div class="flex w-full flex-row items-center justify-center">
+      <NuxtImg
+        :src="currentPhotoSrc"
+        format="webp"
+        quality="80"
+        class="max-h-full max-w-full"
+        preload
+      />
+    </div>
+
     <div class="flex flex-col self-end">
       <span>{{ currentCollectionName }}</span>
       <span>{{ currentPhotoLocation }}</span>
       <span>{{ currentPhotoDate }}</span>
       <span class="font-mono">{{ pagination }}</span>
-    </div>
-
-    <div class="flex w-full flex-row items-center justify-center">
-      <NuxtImg :src="currentPhotoSrc" format="webp" quality="80" class="max-h-full max-w-full" preload />
     </div>
   </div>
 </template>

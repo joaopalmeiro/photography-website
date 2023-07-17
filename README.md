@@ -20,6 +20,10 @@ npm run dev -- -o
 npx nuxi typecheck
 ```
 
+```bash
+npx nuxi cleanup
+```
+
 ## Notes
 
 - https://github.com/Schniz/fnm
@@ -74,3 +78,4 @@ npx nuxi typecheck
 - https://support.cloudinary.com/hc/en-us/articles/202520592-Do-you-have-a-file-size-limit-
 - https://dev.to/jacobandrewsky/optimized-images-in-nuxt-with-cloudinary-4897 + https://github.com/nuxt-modules/cloudinary
 - https://faizalwestcott.com/lisbon-22
+- https://nuxt.com/docs/api/commands/cleanup
