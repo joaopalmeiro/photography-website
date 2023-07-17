@@ -5,3 +5,4 @@ dist/
 # https://nuxt.com/docs/guide/directory-structure/gitignore
 .nuxt/
 .output/
+public/

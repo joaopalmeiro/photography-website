@@ -26,7 +26,7 @@ const collections: Collection[] = [
     name: 'Black & Night',
     photos: [
       {
-        src: 'https://placehold.co/600x400',
+        src: '/_MG_5561-2.jpg',
         location: 'Lisbon, Portugal',
         date: new Date(2023, m(1), 1)
       },

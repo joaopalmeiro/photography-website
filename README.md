@@ -70,3 +70,7 @@ npx nuxi typecheck
 - https://github.com/evilmartians/mono + https://github.com/evilmartians/mono/releases
 - https://rsms.me/inter + https://github.com/rsms/inter/releases
 - https://evilmartians.com/chronicles/the-joy-of-variable-fonts-getting-started-on-the-frontend
+- https://uploadcare.com/pricing/
+- https://support.cloudinary.com/hc/en-us/articles/202520592-Do-you-have-a-file-size-limit-
+- https://dev.to/jacobandrewsky/optimized-images-in-nuxt-with-cloudinary-4897 + https://github.com/nuxt-modules/cloudinary
+- https://faizalwestcott.com/lisbon-22

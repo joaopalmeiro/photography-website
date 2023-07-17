@@ -6,6 +6,11 @@
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth -->
 <!-- https://devhints.io/wip/intl-datetime -->
+<!-- https://image.nuxtjs.org/components/nuxt-img#quality (100, 90, 80 or 55) -->
+<!-- class="max-h-[40rem]" -->
+<!-- https://image.nuxtjs.org/configuration#screens -->
+<!-- https://sharp.pixelplumbing.com/api-output#webp -->
+<!-- https://stackoverflow.com/questions/15295697/make-an-image-to-fit-its-parent-dimensions -->
 
 <script setup lang="ts">
 import { onKeyStroke } from '@vueuse/core'
@@ -72,7 +77,7 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
     </div>
 
     <div class="flex w-full flex-row items-center justify-center">
-      <NuxtImg :src="currentPhotoSrc" />
+      <NuxtImg :src="currentPhotoSrc" format="webp" quality="80" class="max-h-full max-w-full" preload />
     </div>
   </div>
 </template>
