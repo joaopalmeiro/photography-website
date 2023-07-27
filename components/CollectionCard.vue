@@ -29,7 +29,7 @@ const extraCountLabel = computed(() => {
       :src="src"
       format="webp"
       :quality="80"
-      class="col-span-full row-span-full"
+      class="col-span-full row-span-full aspect-photo"
     />
 
     <div v-if="extraCount" class="col-span-full row-span-full">

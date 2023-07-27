@@ -74,13 +74,13 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 </script>
 
 <template>
-  <div class="grid grid-cols-[5fr_1fr]">
+  <div class="grid grid-cols-photo">
     <div class="flex h-screen items-center justify-center py-6">
       <NuxtImg
         :src="currentPhotoSrc"
         format="webp"
         :quality="80"
-        class="max-h-full max-w-full"
+        class="aspect-photo max-h-full max-w-full"
       />
     </div>
 
