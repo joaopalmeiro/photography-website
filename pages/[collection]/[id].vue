@@ -75,7 +75,7 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 </script>
 
 <template>
-  <div class="grid grid-cols-photo">
+  <main class="grid grid-cols-photo">
     <div class="flex h-screen items-center justify-center py-6">
       <NuxtImg
         :src="currentPhotoSrc"
@@ -102,5 +102,5 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
         <span>{{ currentPhotoDate }}</span>
       </div>
     </div>
-  </div>
+  </main>
 </template>

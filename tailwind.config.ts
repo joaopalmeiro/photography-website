@@ -2,6 +2,7 @@
 // https://github.com/tailwindlabs/tailwindcss/blob/v3.3.2/stubs/config.full.js#L27
 // https://tailwindcss.com/docs/aspect-ratio
 // https://github.com/tailwindlabs/tailwindcss/discussions/1739
+// https://tailwindcss.com/docs/font-family#providing-default-font-settings
 
 import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
