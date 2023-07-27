@@ -14,6 +14,7 @@
 <!-- https://nuxt.com/docs/api/utils/create-error -->
 <!-- https://github.com/c1llo/gallery/blob/main/src/layouts/gallery.vue#L18 -->
 <!-- https://image.nuxtjs.org/components/nuxt-img#preload or https://image.nuxtjs.org/components/nuxt-img#loading -->
+<!-- https://stackoverflow.com/questions/46699452/how-to-set-max-height-to-a-css-grid -->
 
 <script setup lang="ts">
 const route = useRoute()
@@ -73,8 +74,8 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 </script>
 
 <template>
-  <div class="flex h-screen flex-row gap-2">
-    <div class="flex w-full flex-row items-center justify-center">
+  <div class="grid grid-cols-[5fr_1fr]">
+    <div class="flex h-screen items-center justify-center py-6">
       <NuxtImg
         :src="currentPhotoSrc"
         format="webp"
@@ -83,11 +84,15 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
       />
     </div>
 
-    <div class="flex flex-col self-end">
-      <span>{{ currentCollectionName }}</span>
-      <span>{{ currentPhotoLocation }}</span>
-      <span>{{ currentPhotoDate }}</span>
-      <span class="font-mono">{{ pagination }}</span>
+    <div class="flex flex-col justify-between py-8">
+      <div class="flex flex-col">
+        <span>{{ currentCollectionName }}</span>
+        <span class="font-mono">{{ pagination }}</span>
+      </div>
+      <div class="flex flex-col">
+        <span>{{ currentPhotoLocation }}</span>
+        <span>{{ currentPhotoDate }}</span>
+      </div>
     </div>
   </div>
 </template>
