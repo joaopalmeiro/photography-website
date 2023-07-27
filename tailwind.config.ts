@@ -16,8 +16,7 @@ export default <Partial<Config>>{
         photo: '5fr 1fr'
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        mono: ['MartianMonoVF', ...defaultTheme.fontFamily.mono]
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
       }
     }
   },

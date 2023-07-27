@@ -86,8 +86,8 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 
     <div class="flex flex-col justify-between py-8">
       <div class="flex flex-col">
-        <span>{{ currentCollectionName }}</span>
-        <span class="font-mono">{{ pagination }}</span>
+        <h2>{{ currentCollectionName }}</h2>
+        <span class="tabular-nums">{{ pagination }}</span>
       </div>
       <div class="flex flex-col">
         <span>{{ currentPhotoLocation }}</span>

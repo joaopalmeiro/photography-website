@@ -1,12 +1,4 @@
 @font-face {
-  /* v1.0.0 */
-  font-family: "MartianMonoVF";
-  font-display: swap;
-  font-style: normal;
-  src: url("MartianMonoVF.woff2") format("woff2");
-}
-
-@font-face {
   /* v3.19 */
   font-family: "Inter var";
   font-weight: 100 900;
