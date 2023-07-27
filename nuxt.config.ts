@@ -14,7 +14,7 @@ const dynamicPhotoRoutes: string[] = config.collections
   .flat()
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@vueuse/nuxt'],
   tailwindcss: {
     viewer: false
   },

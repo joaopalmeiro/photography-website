@@ -13,10 +13,9 @@
 <!-- https://stackoverflow.com/questions/15295697/make-an-image-to-fit-its-parent-dimensions -->
 <!-- https://nuxt.com/docs/api/utils/create-error -->
 <!-- https://github.com/c1llo/gallery/blob/main/src/layouts/gallery.vue#L18 -->
+<!-- https://image.nuxtjs.org/components/nuxt-img#preload or https://image.nuxtjs.org/components/nuxt-img#loading -->
 
 <script setup lang="ts">
-import { onKeyStroke } from '@vueuse/core'
-
 const route = useRoute()
 const { collections } = useAppConfig()
 
@@ -79,9 +78,8 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
       <NuxtImg
         :src="currentPhotoSrc"
         format="webp"
-        quality="80"
+        :quality="80"
         class="max-h-full max-w-full"
-        preload
       />
     </div>
 

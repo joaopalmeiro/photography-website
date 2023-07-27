@@ -34,7 +34,7 @@ npx nuxi cleanup
 - `npm install slugify`
 - `npm install -D slugify`
 - `npm install -D eslint-plugin-tailwindcss`
-- `npm install @vueuse/core`
+- `npm install @vueuse/core` or `npm install -D @vueuse/nuxt @vueuse/core`
 - https://nuxt.com/docs/api/commands/prepare
 - https://nuxt.com/docs/guide/directory-structure/server
 - https://github.com/c1llo/gallery
@@ -58,6 +58,7 @@ npx nuxi cleanup
 - https://lucide.dev/
 - https://nuxt.com/modules/icons
 - https://tailwindui.com/
+- https://spotlight.tailwindui.com/ + https://ui.nuxtlabs.com/getting-started + https://ark-ui.com/docs/vue/overview/getting-started
 - https://headlessui.com/
 - https://www.anron.pro/
 - https://www.adobe.com/express/discover/sizes/photo-aspect-ratio
@@ -79,3 +80,4 @@ npx nuxi cleanup
 - https://dev.to/jacobandrewsky/optimized-images-in-nuxt-with-cloudinary-4897 + https://github.com/nuxt-modules/cloudinary
 - https://faizalwestcott.com/lisbon-22
 - https://nuxt.com/docs/api/commands/cleanup
+- https://medium.com/design-bridges/optical-effects-9fca82b4cd9a
