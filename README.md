@@ -81,3 +81,5 @@ npx nuxi cleanup
 - https://faizalwestcott.com/lisbon-22
 - https://nuxt.com/docs/api/commands/cleanup
 - https://medium.com/design-bridges/optical-effects-9fca82b4cd9a
+- https://github.com/cpsoinos/nuxt-svgo
+- https://github.com/jpkleemans/vite-svg-loader + https://github.com/damianstasik/vue-svg-loader/issues/180
