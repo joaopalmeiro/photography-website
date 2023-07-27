@@ -7,6 +7,8 @@ defineProps<{
 
 <template>
   <NuxtLink :to="to" class="cursor-zoom-in">
-    <h2>{{ title }}</h2>
+    <h2 class="text-neutral-900">
+      {{ title }}
+    </h2>
   </NuxtLink>
 </template>

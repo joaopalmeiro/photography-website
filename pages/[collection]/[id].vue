@@ -15,6 +15,7 @@
 <!-- https://github.com/c1llo/gallery/blob/main/src/layouts/gallery.vue#L18 -->
 <!-- https://image.nuxtjs.org/components/nuxt-img#preload or https://image.nuxtjs.org/components/nuxt-img#loading -->
 <!-- https://stackoverflow.com/questions/46699452/how-to-set-max-height-to-a-css-grid -->
+<!-- https://vuejs.org/guide/essentials/list.html#v-for-with-a-range -->
 
 <script setup lang="ts">
 const route = useRoute()
@@ -84,12 +85,19 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
       />
     </div>
 
-    <div class="flex flex-col justify-between py-8">
-      <div class="flex flex-col">
-        <h2>{{ currentCollectionName }}</h2>
-        <span class="tabular-nums">{{ pagination }}</span>
+    <div class="flex flex-col justify-between py-8 text-neutral-900">
+      <div class="flex flex-col leading-8">
+        <h2 class="text-xl">
+          {{ currentCollectionName }}
+        </h2>
+        <span class="font-medium tabular-nums">{{ pagination }}</span>
       </div>
-      <div class="flex flex-col">
+
+      <div>
+        <hr v-for="n in Number(route.params.id)" :key="n" class="my-4 border-neutral-200">
+      </div>
+
+      <div class="flex flex-col leading-6">
         <span>{{ currentPhotoLocation }}</span>
         <span>{{ currentPhotoDate }}</span>
       </div>

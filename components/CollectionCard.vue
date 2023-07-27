@@ -32,7 +32,7 @@ const extraCountLabel = computed(() => {
       class="col-span-full row-span-full aspect-photo"
     />
 
-    <div v-if="extraCount" class="col-span-full row-span-full">
+    <div v-if="extraCount" class="col-span-full row-span-full text-neutral-900">
       {{ extraCountLabel }}
     </div>
   </NuxtLink>

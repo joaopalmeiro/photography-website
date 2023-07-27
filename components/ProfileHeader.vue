@@ -5,7 +5,7 @@ const { name, instagram } = useAppConfig()
 </script>
 
 <template>
-  <header>
+  <header class="text-neutral-900">
     <h1>{{ name }}</h1>
 
     <NuxtLink :to="instagram" target="_blank" class="cursor-alias">
