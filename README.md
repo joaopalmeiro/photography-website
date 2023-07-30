@@ -4,6 +4,8 @@ My photography portfolio.
 
 ## Development
 
+Get social media icons from the [social-media-icons](https://github.com/joaopalmeiro/social-media-icons) repo.
+
 ```bash
 fnm install && fnm use && node --version
 ```
@@ -83,3 +85,10 @@ npx nuxi cleanup
 - https://medium.com/design-bridges/optical-effects-9fca82b4cd9a
 - https://github.com/cpsoinos/nuxt-svgo
 - https://github.com/jpkleemans/vite-svg-loader + https://github.com/damianstasik/vue-svg-loader/issues/180
+- https://github.com/nuxt-community/svg-module
+- https://github.com/shrpne/vue-inline-svg
+- https://github.com/shadcn-ui/ui/blob/main/tailwind.config.cjs
+- https://ui.shadcn.com/docs/theming
+- https://ui.shadcn.com/docs/components/button#outline + https://ui.shadcn.com/docs/components/button#with-icon
+- https://tailwindui.com/components/application-ui/elements/buttons
+- `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2`

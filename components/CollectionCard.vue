@@ -24,7 +24,7 @@ const extraCountLabel = computed(() => {
 </script>
 
 <template>
-  <NuxtLink :to="to" class="grid cursor-zoom-in">
+  <NuxtLink :to="to" class="grid cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2">
     <NuxtImg
       :src="src"
       format="webp"
