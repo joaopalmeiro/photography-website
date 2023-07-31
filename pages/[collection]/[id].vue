@@ -146,7 +146,7 @@ useSeoMeta({
         </InternalLink>
       </div>
 
-      <div class="flex flex-col gap-4 text-neutral-900">
+      <div class="flex flex-col gap-4 pb-[6.5rem] text-neutral-900 md:pb-0">
         <div class="flex flex-col leading-8">
           <h2 class="text-xl">
             {{ currentCollectionName }}
@@ -154,7 +154,7 @@ useSeoMeta({
           <span class="font-medium tabular-nums">{{ pagination }}</span>
         </div>
 
-        <div class="flex flex-col pb-[6.5rem] text-sm leading-6 md:pb-0">
+        <div class="flex flex-col text-sm leading-6">
           <span>{{ currentPhotoLocation }}</span>
           <span>{{ currentPhotoDate }}</span>
         </div>

@@ -5,20 +5,26 @@ const { name, instagram } = useAppConfig()
 </script>
 
 <template>
-  <header class="flex flex-col items-start gap-4 py-16 text-neutral-900">
-    <h1 class="text-4xl">
-      {{ name }}
-    </h1>
+  <header class="flex flex-col items-start gap-6 py-24 text-neutral-900">
+    <div class="flex flex-col gap-2">
+      <h1 class="text-4xl">
+        {{ name }}
+      </h1>
 
-    <p>My photography portfolio. The photos are grouped by collections.</p>
+      <p class="text-neutral-700">
+        My photography portfolio. The photos are grouped by collections.
+      </p>
+    </div>
 
-    <SocialMediaLink :to="instagram">
-      <template #icon>
-        <InstagramIcon class="-ml-0.5" />
-      </template>
-      <template #default>
-        Follow me
-      </template>
-    </SocialMediaLink>
+    <div class="flex gap-2">
+      <SocialMediaLink :to="instagram">
+        <template #icon>
+          <InstagramIcon class="-ml-0.5" />
+        </template>
+        <template #default>
+          Follow me
+        </template>
+      </SocialMediaLink>
+    </div>
   </header>
 </template>

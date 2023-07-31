@@ -15,7 +15,7 @@ useSeoMeta({
 })
 
 // console.log(JSON.stringify(collections, null, 2))
-const numberPhotos = 5
+const numberPhotos = 3
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const numberPhotos = 5
       <div
         v-for="{ name, slug, photos } in collections"
         :key="slug"
-        class="grid grid-cols-3 gap-2 md:grid-cols-6"
+        class="grid grid-cols-2 gap-2 md:grid-cols-4"
       >
         <CollectionTitle :title="name" :to="`/${slug}/${photos[0].id}`" />
 
