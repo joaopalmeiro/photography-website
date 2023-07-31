@@ -130,29 +130,31 @@ useSeoMeta({
     </div>
 
     <div class="flex flex-col justify-between py-8">
-      <div class="flex flex-col leading-8 text-neutral-900">
-        <h2 class="text-xl">
-          {{ currentCollectionName }}
-        </h2>
-        <span class="font-medium tabular-nums">{{ pagination }}</span>
-      </div>
-
       <div class="flex gap-2">
-        <InternalLink to="/">
+        <InternalLink to="/" class="cursor-zoom-out">
           <HomeIcon class="h-6 w-6" />
         </InternalLink>
         <div class="m-2 rounded-md border border-neutral-100" />
-        <InternalLink :to="prevPath">
+        <InternalLink :to="prevPath" class="cursor-w-resize">
           <ChevronLeftIcon class="h-6 w-6" />
         </InternalLink>
-        <InternalLink :to="nextPath">
+        <InternalLink :to="nextPath" class="cursor-e-resize">
           <ChevronRightIcon class="h-6 w-6" />
         </InternalLink>
       </div>
 
-      <div class="flex flex-col leading-6 text-neutral-900">
-        <span>{{ currentPhotoLocation }}</span>
-        <span>{{ currentPhotoDate }}</span>
+      <div class="text-neutral-900">
+        <div class="flex flex-col leading-8">
+          <h2 class="text-xl">
+            {{ currentCollectionName }}
+          </h2>
+          <span class="font-medium tabular-nums">{{ pagination }}</span>
+        </div>
+
+        <div class="flex flex-col leading-6">
+          <span>{{ currentPhotoLocation }}</span>
+          <span>{{ currentPhotoDate }}</span>
+        </div>
       </div>
     </div>
   </main>
