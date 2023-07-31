@@ -26,6 +26,20 @@ npx nuxi typecheck
 npx nuxi cleanup
 ```
 
+## Deployment
+
+```bash
+npm run login
+```
+
+```bash
+npm run vbuild
+```
+
+```bash
+npm run deploy
+```
+
 ## Notes
 
 - https://github.com/Schniz/fnm
@@ -37,6 +51,7 @@ npx nuxi cleanup
 - `npm install -D slugify`
 - `npm install -D eslint-plugin-tailwindcss`
 - `npm install @vueuse/core` or `npm install -D @vueuse/nuxt @vueuse/core`
+- `npm install -D vercel`
 - https://nuxt.com/docs/api/commands/prepare
 - https://nuxt.com/docs/guide/directory-structure/server
 - https://github.com/c1llo/gallery
@@ -92,3 +107,7 @@ npx nuxi cleanup
 - https://ui.shadcn.com/docs/components/button#outline + https://ui.shadcn.com/docs/components/button#with-icon
 - https://tailwindui.com/components/application-ui/elements/buttons
 - `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2`
+- https://vercel.com/docs/cli:
+  - Build Command: `npm run generate`
+  - Install Command: `npm install`
+  - Development Command: `npm run dev`

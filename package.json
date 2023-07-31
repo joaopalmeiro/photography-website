@@ -9,7 +9,10 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint . --ext .ts,.vue --config .eslintrc",
     "lint:fix": "eslint . --ext .ts,.vue --config .eslintrc --fix",
-    "lint:config": "eslint --config .eslintrc --print-config .eslintrc"
+    "lint:config": "eslint --config .eslintrc --print-config .eslintrc",
+    "login": "vercel login",
+    "vbuild": "vercel pull && vercel build",
+    "deploy": "vercel deploy --prebuilt --prod"
   },
   "devDependencies": {
     "@nuxt/image": "1.0.0-rc.1",
@@ -21,6 +24,7 @@
     "eslint-plugin-nuxt": "4.0.0",
     "eslint-plugin-tailwindcss": "3.13.0",
     "nuxt": "3.6.1",
-    "slugify": "1.6.6"
+    "slugify": "1.6.6",
+    "vercel": "31.2.0"
   }
 }
