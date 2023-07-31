@@ -20,6 +20,12 @@
 <!-- https://github.com/vueuse/vueuse/blob/main/packages/core/useSwipe/demo.vue -->
 
 <script setup lang="ts">
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  HomeIcon
+} from '@heroicons/vue/24/outline'
+
 const route = useRoute()
 const { collections, name } = useAppConfig()
 
@@ -69,22 +75,32 @@ const pagination = `${route.params.id} of ${numberPhotos}`
 const PREV_NAVIGATION_KEYS = ['ArrowLeft', 'ArrowUp', 'a', 'A', 'w', 'W']
 const NEXT_NAVIGATION_KEYS = ['ArrowRight', 'ArrowDown', 'd', 'D', 's', 'S']
 
-async function handlePrev () {
+const prevPath = computed(() => {
   if (numberPhotos && currentPhoto) {
     const newId = getNextImageId(currentPhoto.id, -1, numberPhotos)
-    // console.log("PREV", newId)
 
-    await navigateTo(`/${route.params.collection}/${newId}`)
+    return `/${route.params.collection}/${newId}`
   }
+
+  return route.path
+})
+
+const nextPath = computed(() => {
+  if (numberPhotos && currentPhoto) {
+    const newId = getNextImageId(currentPhoto.id, 1, numberPhotos)
+
+    return `/${route.params.collection}/${newId}`
+  }
+
+  return route.path
+})
+
+async function handlePrev () {
+  await navigateTo(prevPath.value)
 }
 
 async function handleNext () {
-  if (numberPhotos && currentPhoto) {
-    const newId = getNextImageId(currentPhoto.id, 1, numberPhotos)
-    // console.log("NEXT", newId)
-
-    await navigateTo(`/${route.params.collection}/${newId}`)
-  }
+  await navigateTo(nextPath.value)
 }
 
 onKeyStroke(PREV_NAVIGATION_KEYS, handlePrev)
@@ -113,23 +129,28 @@ useSeoMeta({
       />
     </div>
 
-    <div class="flex flex-col justify-between py-8 text-neutral-900">
-      <div class="flex flex-col leading-8">
+    <div class="flex flex-col justify-between py-8">
+      <div class="flex flex-col leading-8 text-neutral-900">
         <h2 class="text-xl">
           {{ currentCollectionName }}
         </h2>
         <span class="font-medium tabular-nums">{{ pagination }}</span>
       </div>
 
-      <div>
-        <hr
-          v-for="n in Number(route.params.id)"
-          :key="n"
-          class="my-4 border-neutral-200"
-        >
+      <div class="flex gap-2">
+        <InternalLink to="/">
+          <HomeIcon class="h-6 w-6" />
+        </InternalLink>
+        <div class="m-2 rounded-md border border-neutral-100" />
+        <InternalLink :to="prevPath">
+          <ChevronLeftIcon class="h-6 w-6" />
+        </InternalLink>
+        <InternalLink :to="nextPath">
+          <ChevronRightIcon class="h-6 w-6" />
+        </InternalLink>
       </div>
 
-      <div class="flex flex-col leading-6">
+      <div class="flex flex-col leading-6 text-neutral-900">
         <span>{{ currentPhotoLocation }}</span>
         <span>{{ currentPhotoDate }}</span>
       </div>

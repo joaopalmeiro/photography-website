@@ -138,32 +138,27 @@ npm run deploy
 // https://nuxt.com/docs/api/utils/define-nuxt-route-middleware
 // https://router.vuejs.org/api/interfaces/RouteLocationNormalized.html
 
-import { withoutTrailingSlash } from 'ufo'
+import { withoutTrailingSlash } from "ufo";
 
 export default defineNuxtRouteMiddleware((to) => {
-  if (to.path !== '/' && to.path.endsWith('/')) {
-    const newPath = withoutTrailingSlash(to.path)
+  if (to.path !== "/" && to.path.endsWith("/")) {
+    const newPath = withoutTrailingSlash(to.path);
 
-    return navigateTo(newPath, { redirectCode: 308 })
+    return navigateTo(newPath, { redirectCode: 308 });
   }
-})
+});
 ```
 
-### `InternalLink.vue`
+### Divider
 
 ```vue
-<script setup lang="ts">
-defineProps<{
-    to: string;
-}>()
-</script>
-
 <template>
-  <NuxtLink
-    :to="to"
-    class="cursor-w-resize rounded-md border border-neutral-100 bg-neutral-50 px-4 py-2 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2"
-  >
-    <slot />
-  </NuxtLink>
+  <div>
+    <hr
+      v-for="n in Number(route.params.id)"
+      :key="n"
+      class="my-4 border-neutral-200"
+    />
+  </div>
 </template>
 ```
