@@ -12,6 +12,7 @@
     "lint:config": "eslint --config .eslintrc --print-config .eslintrc",
     "login": "vercel login",
     "vbuild": "vercel pull && vercel build",
+    "vpreview": "npx serve .vercel/output/static",
     "deploy": "vercel deploy --prebuilt --prod"
   },
   "devDependencies": {

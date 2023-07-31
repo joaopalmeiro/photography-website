@@ -23,7 +23,7 @@ npx nuxi typecheck
 ```
 
 ```bash
-npx nuxi cleanup
+npx nuxi cleanup && rm -rf .vercel/output/ node_modules/
 ```
 
 ```bash
@@ -117,3 +117,31 @@ npm run deploy
   - Development Command: `npm run dev`
 - https://github.com/nuxt/image/issues/757 + https://github.com/unjs/nitro/pull/1073
 - https://github.com/nuxt/image/issues/689#issuecomment-1399187132
+- https://github.com/nuxt/image/issues/617
+- https://vercel.com/docs/frameworks/nuxt#nuxt-route-middleware-on-vercel
+- `npm cache clean --force`
+- https://github.com/nuxt/nuxt/issues/22083 + https://github.com/nuxt/nuxt/issues/22072
+- https://github.com/nuxt/image/issues/933 + https://github.com/nuxt/image/issues/893
+- https://github.com/nuxt/image/pull/882
+
+## Snippets
+
+### `middleware/trailing-slash.global.ts`
+
+```ts
+// Source: https://blog.adriaan.io/redirect-trailing-slashes-in-nuxt-3.html
+// https://nuxt.com/docs/guide/directory-structure/middleware#what-order-middleware-runs-in
+// https://github.com/unjs/ufo
+// https://nuxt.com/docs/api/utils/define-nuxt-route-middleware
+// https://router.vuejs.org/api/interfaces/RouteLocationNormalized.html
+
+import { withoutTrailingSlash } from 'ufo'
+
+export default defineNuxtRouteMiddleware((to) => {
+  if (to.path !== '/' && to.path.endsWith('/')) {
+    const newPath = withoutTrailingSlash(to.path)
+
+    return navigateTo(newPath, { redirectCode: 308 })
+  }
+})
+```

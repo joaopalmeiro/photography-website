@@ -6,6 +6,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config#generate + https://nitro.unjs.io/config#prerender
 // https://nitro.unjs.io/config#routerules
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307
+// https://nuxt.com/docs/api/configuration/nuxt-config#payloadextraction
+// https://github.com/nuxt/nuxt/issues/22068
 
 import type { NitroConfig } from 'nitropack'
 import config from './photos.config'
@@ -18,11 +20,14 @@ const dynamicPhotoRoutes: string[] = config.collections
 
 const collectionToFirstPhoto = config.collections.reduce<NitroConfig['routeRules']>((acc, collection) => {
   const from = `/${collection.slug}`
+  const fromSlash = `${from}/`
+
   const to = `${from}/1`
 
   return {
     ...acc,
-    [from]: { redirect: { to, statusCode: 307 } }
+    [from]: { redirect: { to, statusCode: 307 } },
+    [fromSlash]: { redirect: { to, statusCode: 307 } }
   }
 }, {})
 

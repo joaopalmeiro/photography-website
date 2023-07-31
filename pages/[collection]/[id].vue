@@ -79,7 +79,6 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
     <div class="flex h-screen items-center justify-center py-6">
       <NuxtImg
         :src="currentPhotoSrc"
-        format="webp"
         :quality="80"
         class="aspect-photo max-h-full max-w-full"
       />
