@@ -41,7 +41,8 @@ export default defineNuxtConfig({
   //   }
   // }
   image: {
-    dir: 'assets/images'
+    dir: 'assets/images',
+    provider: 'ipx'
   },
   nitro: {
     prerender: { crawlLinks: false, ignore: [], routes: dynamicPhotoRoutes },

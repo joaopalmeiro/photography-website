@@ -8,4 +8,5 @@ dist
 .nitro/
 .vercel/
 
-assets/images/
+assets/images/*.jpg
+public/*.jpg

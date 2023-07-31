@@ -26,6 +26,10 @@ npx nuxi typecheck
 npx nuxi cleanup
 ```
 
+```bash
+npm outdated
+```
+
 ## Deployment
 
 ```bash
@@ -111,3 +115,5 @@ npm run deploy
   - Build Command: `npm run generate`
   - Install Command: `npm install`
   - Development Command: `npm run dev`
+- https://github.com/nuxt/image/issues/757 + https://github.com/unjs/nitro/pull/1073
+- https://github.com/nuxt/image/issues/689#issuecomment-1399187132
