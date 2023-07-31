@@ -19,7 +19,7 @@ const numberPhotos = 3
 </script>
 
 <template>
-  <div class="mx-auto max-w-screen-xl p-4 md:p-8">
+  <div class="mx-auto max-w-screen-xl px-4 pb-4 md:px-8 md:pb-8">
     <ProfileHeader />
 
     <main>
