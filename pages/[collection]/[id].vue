@@ -117,10 +117,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="grid grid-cols-photo">
+  <main class="grid sm:grid-cols-photo">
     <div
       ref="swipeableEl"
-      class="flex h-screen items-center justify-center py-6"
+      class="flex items-center justify-center sm:h-screen sm:py-6"
     >
       <NuxtImg
         :src="currentPhotoSrc"
@@ -129,7 +129,7 @@ useSeoMeta({
       />
     </div>
 
-    <div class="flex flex-col justify-between py-8">
+    <div class="flex flex-col justify-between sm:py-8">
       <div class="flex gap-2">
         <InternalLink to="/" class="cursor-zoom-out">
           <HomeIcon class="h-6 w-6" />
