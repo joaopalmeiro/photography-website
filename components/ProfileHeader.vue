@@ -10,6 +10,8 @@ const { name, instagram } = useAppConfig()
       {{ name }}
     </h1>
 
+    <p>My photography portfolio. The photos are grouped by collections.</p>
+
     <SocialMediaLink :to="instagram">
       <template #icon>
         <InstagramIcon class="-ml-0.5" />
