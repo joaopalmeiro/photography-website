@@ -16,10 +16,24 @@
 <!-- https://image.nuxtjs.org/components/nuxt-img#preload or https://image.nuxtjs.org/components/nuxt-img#loading -->
 <!-- https://stackoverflow.com/questions/46699452/how-to-set-max-height-to-a-css-grid -->
 <!-- https://vuejs.org/guide/essentials/list.html#v-for-with-a-range -->
+<!-- https://vueuse.org/core/useSwipe/ -->
+<!-- https://github.com/vueuse/vueuse/blob/main/packages/core/useSwipe/demo.vue -->
 
 <script setup lang="ts">
 const route = useRoute()
 const { collections } = useAppConfig()
+
+const swipeableEl = ref<HTMLElement | null>(null)
+const { direction } = useSwipe(swipeableEl, {
+  onSwipeEnd () {
+    if (direction.value === 'right') {
+      handlePrev()
+    }
+    if (direction.value === 'left') {
+      handleNext()
+    }
+  }
+})
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
@@ -39,7 +53,11 @@ const currentPhoto = currentCollection?.photos.find(
 )
 
 if (!currentPhoto) {
-  throw createError({ statusCode: 404, message: 'Photo not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    message: 'Photo not found',
+    fatal: true
+  })
 }
 
 const currentPhotoSrc = currentPhoto?.src
@@ -76,7 +94,10 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
 
 <template>
   <main class="grid grid-cols-photo">
-    <div class="flex h-screen items-center justify-center py-6">
+    <div
+      ref="swipeableEl"
+      class="flex h-screen items-center justify-center py-6"
+    >
       <NuxtImg
         :src="currentPhotoSrc"
         :quality="80"
@@ -93,7 +114,11 @@ onKeyStroke('Escape', async () => await navigateTo('/'))
       </div>
 
       <div>
-        <hr v-for="n in Number(route.params.id)" :key="n" class="my-4 border-neutral-200">
+        <hr
+          v-for="n in Number(route.params.id)"
+          :key="n"
+          class="my-4 border-neutral-200"
+        >
       </div>
 
       <div class="flex flex-col leading-6">
