@@ -1,8 +1,18 @@
 <!-- https://github.com/c1llo/gallery/blob/main/src/pages/index.vue -->
 <!-- https://github.com/c1llo/gallery/blob/main/src/composables/useImages.ts -->
+<!-- https://nuxt.com/docs/api/composables/use-head + https://nuxt.com/docs/api/composables/use-seo-meta -->
+<!-- https://github.com/harlan-zw/zhead/blob/main/src/metaFlat.ts -->
 
 <script setup lang="ts">
-const { collections } = useAppConfig()
+const { collections, name: userName } = useAppConfig()
+
+useSeoMeta({
+  title: () => userName,
+  ogTitle: () => userName,
+  description: 'My photography portfolio.',
+  ogDescription: 'My photography portfolio.',
+  author: () => userName
+})
 
 // console.log(JSON.stringify(collections, null, 2))
 const numberPhotos = 5

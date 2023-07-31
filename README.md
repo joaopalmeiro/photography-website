@@ -125,6 +125,7 @@ npm run deploy
 - https://github.com/nuxt/nuxt/issues/22083 + https://github.com/nuxt/nuxt/issues/22072
 - https://github.com/nuxt/image/issues/933 + https://github.com/nuxt/image/issues/893
 - https://github.com/nuxt/image/pull/882
+- https://www.opengraph.xyz/
 
 ## Snippets
 

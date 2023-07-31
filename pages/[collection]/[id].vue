@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { collections } = useAppConfig()
+const { collections, name } = useAppConfig()
 
 const swipeableEl = ref<HTMLElement | null>(null)
 const { direction } = useSwipe(swipeableEl, {
@@ -90,6 +90,14 @@ async function handleNext () {
 onKeyStroke(PREV_NAVIGATION_KEYS, handlePrev)
 onKeyStroke(NEXT_NAVIGATION_KEYS, handleNext)
 onKeyStroke('Escape', async () => await navigateTo('/'))
+
+useSeoMeta({
+  title: () => `${currentCollectionName} ${route.params.id}`,
+  ogTitle: () => `${currentCollectionName} ${route.params.id}`,
+  description: () => `A photo by ${name}.`,
+  ogDescription: () => `A photo by ${name}.`,
+  author: () => name
+})
 </script>
 
 <template>
