@@ -18,6 +18,7 @@
 <!-- https://vuejs.org/guide/essentials/list.html#v-for-with-a-range -->
 <!-- https://vueuse.org/core/useSwipe/ -->
 <!-- https://github.com/vueuse/vueuse/blob/main/packages/core/useSwipe/demo.vue -->
+<!-- https://flowbite.com/docs/components/bottom-navigation/ -->
 
 <script setup lang="ts">
 import {
@@ -117,10 +118,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="grid sm:grid-cols-photo">
+  <main class="grid p-4 md:grid-cols-photo md:p-0">
     <div
       ref="swipeableEl"
-      class="flex items-center justify-center sm:h-screen sm:py-6"
+      class="flex items-center justify-center md:h-screen md:py-6"
     >
       <NuxtImg
         :src="currentPhotoSrc"
@@ -129,8 +130,10 @@ useSeoMeta({
       />
     </div>
 
-    <div class="flex flex-col justify-between sm:py-8">
-      <div class="flex gap-2">
+    <div class="flex flex-col justify-between md:py-8">
+      <div
+        class="fixed bottom-0 left-0 z-50 flex w-full justify-center gap-2 border-t border-neutral-100 bg-white p-4 md:static md:z-auto md:justify-start md:border-0 md:p-0"
+      >
         <InternalLink to="/" class="cursor-zoom-out">
           <HomeIcon class="h-6 w-6" />
         </InternalLink>
