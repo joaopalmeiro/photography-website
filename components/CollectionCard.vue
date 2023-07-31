@@ -28,7 +28,7 @@ const extraCountLabel = computed(() => {
     <NuxtImg
       :src="src"
       :quality="80"
-      class="col-span-full row-span-full aspect-photo"
+      class="col-span-full row-span-full aspect-photo object-cover"
     />
 
     <div v-if="extraCount" class="col-span-full row-span-full flex items-center justify-center bg-white/75 text-xl text-neutral-900">

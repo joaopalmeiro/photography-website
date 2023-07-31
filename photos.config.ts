@@ -25,7 +25,7 @@ const collections: Collection[] = [
         date: new Date(2023, m(1), 1)
       },
       {
-        src: 'https://placehold.co/600x400',
+        src: '/_MG_5561-2v.jpg',
         location: 'Lisbon, Portugal',
         date: new Date(2023, m(1), 1)
       },

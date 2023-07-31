@@ -118,7 +118,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="grid p-4 md:grid-cols-photo md:p-0">
+  <main class="grid gap-4 p-4 md:grid-cols-photo md:gap-0 md:p-0">
     <div
       ref="swipeableEl"
       class="flex items-center justify-center md:h-screen md:py-6"
@@ -126,7 +126,7 @@ useSeoMeta({
       <NuxtImg
         :src="currentPhotoSrc"
         :quality="80"
-        class="aspect-photo max-h-full max-w-full"
+        class="max-h-full max-w-full object-contain"
       />
     </div>
 
@@ -146,7 +146,7 @@ useSeoMeta({
         </InternalLink>
       </div>
 
-      <div class="text-neutral-900">
+      <div class="mt-4 flex flex-col gap-4 text-neutral-900 md:mt-0">
         <div class="flex flex-col leading-8">
           <h2 class="text-xl">
             {{ currentCollectionName }}
@@ -154,7 +154,7 @@ useSeoMeta({
           <span class="font-medium tabular-nums">{{ pagination }}</span>
         </div>
 
-        <div class="flex flex-col leading-6">
+        <div class="flex flex-col text-sm leading-6">
           <span>{{ currentPhotoLocation }}</span>
           <span>{{ currentPhotoDate }}</span>
         </div>

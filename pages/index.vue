@@ -26,7 +26,7 @@ const numberPhotos = 5
       <div
         v-for="{ name, slug, photos } in collections"
         :key="slug"
-        class="grid grid-cols-6 gap-2"
+        class="grid grid-cols-3 gap-2 md:grid-cols-6"
       >
         <CollectionTitle :title="name" :to="`/${slug}/${photos[0].id}`" />
 
