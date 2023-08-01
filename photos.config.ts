@@ -56,6 +56,7 @@ const collections: Collection[] = [
 export default {
   name: 'João Palmeiro',
   instagram: 'https://www.instagram.com/joaompalmeiro/',
+  portraitMode: 'https://portraitmode.io/profile/joaopalmeiro/',
   collections: collections.map((collection) => {
     const slug = slugify(collection.name, { lower: true })
     const photos = collection.photos.map((photo, index) => {

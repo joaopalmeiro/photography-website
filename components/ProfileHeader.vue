@@ -1,7 +1,7 @@
 <!-- https://nuxt.com/docs/api/components/nuxt-link -->
 
 <script setup lang="ts">
-const { name, instagram } = useAppConfig()
+const { name, instagram, portraitMode } = useAppConfig()
 </script>
 
 <template>
@@ -21,9 +21,10 @@ const { name, instagram } = useAppConfig()
         <template #icon>
           <InstagramIcon class="-ml-0.5" />
         </template>
-        <template #default>
-          Follow me
-        </template>
+        Follow me
+      </SocialMediaLink>
+      <SocialMediaLink :to="portraitMode">
+        PortraitMode
       </SocialMediaLink>
     </div>
   </header>
