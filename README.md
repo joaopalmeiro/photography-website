@@ -126,6 +126,8 @@ npm run deploy
 - https://github.com/nuxt/image/issues/933 + https://github.com/nuxt/image/issues/893
 - https://github.com/nuxt/image/pull/882
 - https://www.opengraph.xyz/
+- https://github.com/nuxt-community/svg-module/issues/86
+- https://github.com/kiwilan/nuxt-svg-transformer
 
 ## Snippets
 
