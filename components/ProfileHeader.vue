@@ -16,9 +16,7 @@ const { name, instagram, portraitMode, gitHub } = useAppConfig()
       </p>
     </div>
 
-    <div
-      class="flex flex-wrap gap-2"
-    >
+    <div class="flex flex-wrap gap-2">
       <SocialMediaLink :to="instagram">
         <template #icon>
           <InstagramIcon class="-ml-0.5" />
