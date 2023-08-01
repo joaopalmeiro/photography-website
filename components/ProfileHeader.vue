@@ -1,6 +1,8 @@
 <!-- https://nuxt.com/docs/api/components/nuxt-link -->
 
 <script setup lang="ts">
+import { InstagramIcon } from 'vue-social-media-icons'
+
 const { name, instagram, portraitMode, gitHub } = useAppConfig()
 </script>
 

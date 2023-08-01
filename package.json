@@ -29,6 +29,7 @@
     "vercel": "31.2.0"
   },
   "dependencies": {
-    "@heroicons/vue": "2.0.18"
+    "@heroicons/vue": "2.0.18",
+    "vue-social-media-icons": "0.0.1"
   }
 }
