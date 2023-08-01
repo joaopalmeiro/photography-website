@@ -118,7 +118,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="grid gap-8 px-4 pt-4 md:grid-cols-photo md:p-0">
+  <main class="grid grid-cols-none gap-8 px-4 pt-4 md:grid-cols-photo md:p-0">
     <div
       ref="swipeableEl"
       class="flex items-center justify-center md:h-screen md:py-8 md:pl-8"

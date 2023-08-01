@@ -1,7 +1,7 @@
 <!-- https://nuxt.com/docs/api/components/nuxt-link -->
 
 <script setup lang="ts">
-const { name, instagram, portraitMode } = useAppConfig()
+const { name, instagram, portraitMode, gitHub } = useAppConfig()
 </script>
 
 <template>
@@ -16,7 +16,9 @@ const { name, instagram, portraitMode } = useAppConfig()
       </p>
     </div>
 
-    <div class="flex gap-2">
+    <div
+      class="flex flex-wrap gap-2"
+    >
       <SocialMediaLink :to="instagram">
         <template #icon>
           <InstagramIcon class="-ml-0.5" />
@@ -25,6 +27,12 @@ const { name, instagram, portraitMode } = useAppConfig()
       </SocialMediaLink>
       <SocialMediaLink :to="portraitMode">
         PortraitMode
+      </SocialMediaLink>
+      <SocialMediaLink :to="gitHub">
+        <template #icon>
+          <GitHubIcon class="-ml-0.5" />
+        </template>
+        Source code
       </SocialMediaLink>
     </div>
   </header>
