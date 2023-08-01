@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "@heroicons/vue": "2.0.18",
-    "vue-social-media-icons": "0.0.1"
+    "vue-social-media-icons": "0.2.0"
   }
 }

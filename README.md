@@ -23,6 +23,12 @@ npx nuxi typecheck
 ```
 
 ```bash
+npx nuxi cleanup && npm install
+```
+
+or
+
+```bash
 npx nuxi cleanup && rm -rf .vercel/output/ node_modules/
 ```
 

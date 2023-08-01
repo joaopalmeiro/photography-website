@@ -1,7 +1,7 @@
 <!-- https://nuxt.com/docs/api/components/nuxt-link -->
 
 <script setup lang="ts">
-import { InstagramIcon } from 'vue-social-media-icons'
+import { InstagramIcon, GithubIcon } from 'vue-social-media-icons'
 
 const { name, instagram, portraitMode, gitHub } = useAppConfig()
 </script>
@@ -30,7 +30,7 @@ const { name, instagram, portraitMode, gitHub } = useAppConfig()
       </SocialMediaLink>
       <SocialMediaLink :to="gitHub">
         <template #icon>
-          <GitHubIcon class="-ml-0.5" />
+          <GithubIcon class="-ml-0.5" />
         </template>
         Source code
       </SocialMediaLink>
