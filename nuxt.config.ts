@@ -1,3 +1,4 @@
 export default defineNuxtConfig({
-  devtools: { enabled: false }
+  devtools: { enabled: false },
+  css: ['resetss/preflight-tailwind.css']
 })
