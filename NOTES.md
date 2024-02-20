@@ -105,6 +105,10 @@
 - https://nuxt.com/docs/getting-started/configuration#external-configuration-files: "Use `vite` key in `nuxt.config`"
 - https://nuxt.com/docs/getting-started/views#layouts: "If you only have a single layout in your application, we recommend using `app.vue` with `<NuxtPage />` instead."
 - https://github.com/nuxt/nuxt/issues/23475
+- Prettier:
+  - https://github.com/nuxt/website-v2/blob/main/.prettierrc
+  - https://github.com/nuxt/nuxters/blob/main/prettier.config.cjs
+  - https://github.com/nuxt/cli/blob/main/.prettierrc
 
 ## Snippets
 
@@ -117,15 +121,15 @@
 // https://nuxt.com/docs/api/utils/define-nuxt-route-middleware
 // https://router.vuejs.org/api/interfaces/RouteLocationNormalized.html
 
-import { withoutTrailingSlash } from "ufo";
+import { withoutTrailingSlash } from 'ufo'
 
-export default defineNuxtRouteMiddleware((to) => {
-  if (to.path !== "/" && to.path.endsWith("/")) {
-    const newPath = withoutTrailingSlash(to.path);
+export default defineNuxtRouteMiddleware(to => {
+  if (to.path !== '/' && to.path.endsWith('/')) {
+    const newPath = withoutTrailingSlash(to.path)
 
-    return navigateTo(newPath, { redirectCode: 308 });
+    return navigateTo(newPath, { redirectCode: 308 })
   }
-});
+})
 ```
 
 ### Divider
@@ -133,11 +137,7 @@ export default defineNuxtRouteMiddleware((to) => {
 ```vue
 <template>
   <div>
-    <hr
-      v-for="n in Number(route.params.id)"
-      :key="n"
-      class="my-4 border-neutral-200"
-    />
+    <hr v-for="n in Number(route.params.id)" :key="n" class="my-4 border-neutral-200" />
   </div>
 </template>
 ```
@@ -153,106 +153,106 @@ export default defineNuxtRouteMiddleware((to) => {
 // https://github.com/tailwindlabs/tailwindcss/discussions/1739
 // https://tailwindcss.com/docs/font-family#providing-default-font-settings
 
-import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
   theme: {
     extend: {
       aspectRatio: {
-        photo: "3 / 2",
+        photo: '3 / 2'
       },
       gridTemplateColumns: {
-        photo: "5fr 1fr",
+        photo: '5fr 1fr'
       },
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-      },
-    },
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   future: {
-    hoverOnlyWhenSupported: true,
-  },
-};
+    hoverOnlyWhenSupported: true
+  }
+}
 ```
 
 #### `photos.config.ts`
 
 ```ts
-import slugify from "slugify";
+import slugify from 'slugify'
 
 function m(month: number): number {
-  return month - 1;
+  return month - 1
 }
 
 interface Photo {
-  src: string;
-  location: string;
-  date: Date;
+  src: string
+  location: string
+  date: Date
 }
 
 interface Collection {
-  name: string;
-  photos: Photo[];
+  name: string
+  photos: Photo[]
 }
 
 const collections: Collection[] = [
   {
-    name: "Black & Night",
+    name: 'Black & Night',
     photos: [
       {
-        src: "/_MG_5561-2.jpg",
-        location: "Lisbon, Portugal",
-        date: new Date(2023, m(1), 1),
+        src: '/_MG_5561-2.jpg',
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
-        src: "/_MG_5561-2v.jpg",
-        location: "Lisbon, Portugal",
-        date: new Date(2023, m(1), 1),
+        src: '/_MG_5561-2v.jpg',
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
-        src: "https://placehold.co/600x400",
-        location: "Lisbon, Portugal",
-        date: new Date(2023, m(1), 1),
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
-        src: "https://placehold.co/1000x4000",
-        location: "Lisbon, Portugal",
-        date: new Date(2023, m(1), 1),
+        src: 'https://placehold.co/1000x4000',
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
-        src: "https://placehold.co/600x400",
-        location: "Lisbon, Portugal",
-        date: new Date(2023, m(1), 1),
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
       },
       {
-        src: "https://placehold.co/600x400",
-        location: "Lisbon, Portugal",
-        date: new Date(2023, m(1), 1),
-      },
-    ],
-  },
-];
+        src: 'https://placehold.co/600x400',
+        location: 'Lisbon, Portugal',
+        date: new Date(2023, m(1), 1)
+      }
+    ]
+  }
+]
 
 export default {
-  name: "João Palmeiro",
-  instagram: "https://www.instagram.com/joaompalmeiro/",
-  portraitMode: "https://portraitmode.io/profile/joaopalmeiro/",
-  gitHub: "https://github.com/joaopalmeiro/photography-website",
-  collections: collections.map((collection) => {
-    const slug = slugify(collection.name, { lower: true });
+  name: 'João Palmeiro',
+  instagram: 'https://www.instagram.com/joaompalmeiro/',
+  portraitMode: 'https://portraitmode.io/profile/joaopalmeiro/',
+  gitHub: 'https://github.com/joaopalmeiro/photography-website',
+  collections: collections.map(collection => {
+    const slug = slugify(collection.name, { lower: true })
     const photos = collection.photos.map((photo, index) => {
-      const id = index + 1;
+      const id = index + 1
 
       return {
         ...photo,
-        id,
-      };
-    });
+        id
+      }
+    })
 
-    return { ...collection, slug, photos };
-  }),
-};
+    return { ...collection, slug, photos }
+  })
+}
 ```
 
 #### `nuxt.config.ts`
@@ -269,36 +269,32 @@ export default {
 // https://nuxt.com/docs/api/configuration/nuxt-config#payloadextraction
 // https://github.com/nuxt/nuxt/issues/22068
 
-import type { NitroConfig } from "nitropack";
-import config from "./photos.config";
+import type { NitroConfig } from 'nitropack'
+import config from './photos.config'
 
 const dynamicPhotoRoutes: string[] = config.collections
-  .map((collection) =>
-    collection.photos.map((photo) => `/${collection.slug}/${photo.id}`)
-  )
-  .flat();
+  .map(collection => collection.photos.map(photo => `/${collection.slug}/${photo.id}`))
+  .flat()
 
-const collectionToFirstPhoto = config.collections.reduce<
-  NitroConfig["routeRules"]
->((acc, collection) => {
-  const from = `/${collection.slug}`;
-  const fromSlash = `${from}/`;
+const collectionToFirstPhoto = config.collections.reduce<NitroConfig['routeRules']>((acc, collection) => {
+  const from = `/${collection.slug}`
+  const fromSlash = `${from}/`
 
-  const to = `${from}/1`;
+  const to = `${from}/1`
 
   return {
     ...acc,
     [from]: { redirect: { to, statusCode: 307 } },
-    [fromSlash]: { redirect: { to, statusCode: 307 } },
-  };
-}, {});
+    [fromSlash]: { redirect: { to, statusCode: 307 } }
+  }
+}, {})
 
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@vueuse/nuxt"],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@vueuse/nuxt'],
   tailwindcss: {
-    viewer: false,
+    viewer: false
   },
-  css: ["@/assets/font.css"],
+  css: ['@/assets/font.css'],
   // app: {
   //   head: {
   //     link: [
@@ -308,23 +304,23 @@ export default defineNuxtConfig({
   //   }
   // }
   image: {
-    dir: "assets/images",
-    provider: "ipx",
+    dir: 'assets/images',
+    provider: 'ipx'
   },
   nitro: {
     prerender: { crawlLinks: false, ignore: [], routes: dynamicPhotoRoutes },
-    routeRules: collectionToFirstPhoto,
-  },
-});
+    routeRules: collectionToFirstPhoto
+  }
+})
 ```
 
 #### `components/InternalLink.vue`
 
 ```vue
 <script setup lang="ts">
-defineProps<{
-  to: string;
-}>();
+  defineProps<{
+    to: string
+  }>()
 </script>
 
 <template>
@@ -363,113 +359,98 @@ defineProps<{
 <!-- https://flowbite.com/docs/components/bottom-navigation/ -->
 
 <script setup lang="ts">
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  HomeIcon,
-} from "@heroicons/vue/24/outline";
+  import { ChevronLeftIcon, ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/outline'
 
-const route = useRoute();
-const { collections, name } = useAppConfig();
+  const route = useRoute()
+  const { collections, name } = useAppConfig()
 
-const swipeableEl = ref<HTMLElement | null>(null);
-const { direction } = useSwipe(swipeableEl, {
-  onSwipeEnd() {
-    if (direction.value === "right") {
-      handlePrev();
+  const swipeableEl = ref<HTMLElement | null>(null)
+  const { direction } = useSwipe(swipeableEl, {
+    onSwipeEnd() {
+      if (direction.value === 'right') {
+        handlePrev()
+      }
+      if (direction.value === 'left') {
+        handleNext()
+      }
     }
-    if (direction.value === "left") {
-      handleNext();
-    }
-  },
-});
+  })
 
-const dateFormatter = new Intl.DateTimeFormat("en-US", {
-  year: "numeric",
-  month: "short",
-  day: "2-digit",
-});
+  const dateFormatter = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit'
+  })
 
-const currentCollection = collections.find(
-  (collection) => collection.slug === route.params.collection
-);
+  const currentCollection = collections.find(collection => collection.slug === route.params.collection)
 
-const currentCollectionName = currentCollection?.name;
-const numberPhotos = currentCollection?.photos.length;
+  const currentCollectionName = currentCollection?.name
+  const numberPhotos = currentCollection?.photos.length
 
-const currentPhoto = currentCollection?.photos.find(
-  (photo) => photo.id.toString() === route.params.id
-);
+  const currentPhoto = currentCollection?.photos.find(photo => photo.id.toString() === route.params.id)
 
-if (!currentPhoto) {
-  throw createError({
-    statusCode: 404,
-    message: "Photo not found",
-    fatal: true,
-  });
-}
-
-const currentPhotoSrc = currentPhoto?.src;
-const currentPhotoLocation = currentPhoto?.location;
-const currentPhotoDate = dateFormatter.format(currentPhoto?.date);
-
-const pagination = `${route.params.id} of ${numberPhotos}`;
-
-const PREV_NAVIGATION_KEYS = ["ArrowLeft", "ArrowUp", "a", "A", "w", "W"];
-const NEXT_NAVIGATION_KEYS = ["ArrowRight", "ArrowDown", "d", "D", "s", "S"];
-
-const prevPath = computed(() => {
-  if (numberPhotos && currentPhoto) {
-    const newId = getNextImageId(currentPhoto.id, -1, numberPhotos);
-
-    return `/${route.params.collection}/${newId}`;
+  if (!currentPhoto) {
+    throw createError({
+      statusCode: 404,
+      message: 'Photo not found',
+      fatal: true
+    })
   }
 
-  return route.path;
-});
+  const currentPhotoSrc = currentPhoto?.src
+  const currentPhotoLocation = currentPhoto?.location
+  const currentPhotoDate = dateFormatter.format(currentPhoto?.date)
 
-const nextPath = computed(() => {
-  if (numberPhotos && currentPhoto) {
-    const newId = getNextImageId(currentPhoto.id, 1, numberPhotos);
+  const pagination = `${route.params.id} of ${numberPhotos}`
 
-    return `/${route.params.collection}/${newId}`;
+  const PREV_NAVIGATION_KEYS = ['ArrowLeft', 'ArrowUp', 'a', 'A', 'w', 'W']
+  const NEXT_NAVIGATION_KEYS = ['ArrowRight', 'ArrowDown', 'd', 'D', 's', 'S']
+
+  const prevPath = computed(() => {
+    if (numberPhotos && currentPhoto) {
+      const newId = getNextImageId(currentPhoto.id, -1, numberPhotos)
+
+      return `/${route.params.collection}/${newId}`
+    }
+
+    return route.path
+  })
+
+  const nextPath = computed(() => {
+    if (numberPhotos && currentPhoto) {
+      const newId = getNextImageId(currentPhoto.id, 1, numberPhotos)
+
+      return `/${route.params.collection}/${newId}`
+    }
+
+    return route.path
+  })
+
+  async function handlePrev() {
+    await navigateTo(prevPath.value)
   }
 
-  return route.path;
-});
+  async function handleNext() {
+    await navigateTo(nextPath.value)
+  }
 
-async function handlePrev() {
-  await navigateTo(prevPath.value);
-}
+  onKeyStroke(PREV_NAVIGATION_KEYS, handlePrev)
+  onKeyStroke(NEXT_NAVIGATION_KEYS, handleNext)
+  onKeyStroke('Escape', async () => await navigateTo('/'))
 
-async function handleNext() {
-  await navigateTo(nextPath.value);
-}
-
-onKeyStroke(PREV_NAVIGATION_KEYS, handlePrev);
-onKeyStroke(NEXT_NAVIGATION_KEYS, handleNext);
-onKeyStroke("Escape", async () => await navigateTo("/"));
-
-useSeoMeta({
-  title: () => `${currentCollectionName} ${route.params.id}`,
-  ogTitle: () => `${currentCollectionName} ${route.params.id}`,
-  description: () => `A photo by ${name}.`,
-  ogDescription: () => `A photo by ${name}.`,
-  author: () => name,
-});
+  useSeoMeta({
+    title: () => `${currentCollectionName} ${route.params.id}`,
+    ogTitle: () => `${currentCollectionName} ${route.params.id}`,
+    description: () => `A photo by ${name}.`,
+    ogDescription: () => `A photo by ${name}.`,
+    author: () => name
+  })
 </script>
 
 <template>
   <main class="grid grid-cols-none gap-8 px-4 pt-4 md:grid-cols-photo md:p-0">
-    <div
-      ref="swipeableEl"
-      class="flex items-center justify-center md:h-screen md:py-8 md:pl-8"
-    >
-      <NuxtImg
-        :src="currentPhotoSrc"
-        :quality="80"
-        class="max-h-full max-w-full object-contain"
-      />
+    <div ref="swipeableEl" class="flex items-center justify-center md:h-screen md:py-8 md:pl-8">
+      <NuxtImg :src="currentPhotoSrc" :quality="80" class="max-h-full max-w-full object-contain" />
     </div>
 
     <div class="flex flex-col justify-between md:py-8 md:pr-8">
@@ -509,7 +490,7 @@ useSeoMeta({
 ## Commands
 
 ```bash
-npm install nuxt vue vue-router
+npm install nuxt vue vue-router && npm install -D npm-run-all2 prettier sort-package-json
 ```
 
 ```bash

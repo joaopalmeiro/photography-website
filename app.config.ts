@@ -1,3 +1,3 @@
 export default defineAppConfig({
-    name: 'João Palmeiro',
-  })
+  name: 'João Palmeiro'
+})
