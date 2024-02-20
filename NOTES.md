@@ -498,3 +498,7 @@ useSeoMeta({
 ```
 
 ## Commands
+
+```bash
+npx nuxi@latest init test
+```
