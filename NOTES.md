@@ -96,6 +96,15 @@
 - https://github.com/c1llo/gallery/blob/main/src/composables/useImages.ts
 - https://nuxt.com/docs/api/composables/use-head + https://nuxt.com/docs/api/composables/use-seo-meta
 - https://github.com/harlan-zw/zhead/blob/main/src/metaFlat.ts
+- https://github.com/nuxt/cli:
+  - https://github.com/nuxt/cli/blob/v3.10.1/src/commands/init.ts#L13
+  - https://github.com/nuxt/starter/blob/templates/templates/v3.json
+  - https://github.com/unjs/citty: CLI builder
+  - https://nuxt.com/docs/guide/directory-structure/pages
+  - https://nuxt.com/docs/examples/routing/pages
+- https://nuxt.com/docs/getting-started/configuration#external-configuration-files: "Use `vite` key in `nuxt.config`"
+- https://nuxt.com/docs/getting-started/views#layouts: "If you only have a single layout in your application, we recommend using `app.vue` with `<NuxtPage />` instead."
+- https://github.com/nuxt/nuxt/issues/23475
 
 ## Snippets
 
@@ -498,6 +507,10 @@ useSeoMeta({
 ```
 
 ## Commands
+
+```bash
+npm install nuxt vue vue-router
+```
 
 ```bash
 npx nuxi@latest init test

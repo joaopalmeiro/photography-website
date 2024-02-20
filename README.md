@@ -15,3 +15,13 @@ fnm install && fnm use && node --version && npm --version
 ```bash
 npm install
 ```
+
+```bash
+npm run dev
+```
+
+## Deployment
+
+```bash
+npm run build
+```
