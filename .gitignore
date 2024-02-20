@@ -1,12 +1,2 @@
 node_modules/
 .DS_Store
-
-# https://nuxt.com/docs/guide/directory-structure/gitignore
-dist
-.nuxt/
-.output/
-.nitro/
-.vercel/
-
-assets/images/*.jpg
-public/*.jpg
