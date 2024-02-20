@@ -109,6 +109,9 @@
   - https://github.com/nuxt/website-v2/blob/main/.prettierrc
   - https://github.com/nuxt/nuxters/blob/main/prettier.config.cjs
   - https://github.com/nuxt/cli/blob/main/.prettierrc
+- Global styling:
+  - https://nuxt.com/docs/getting-started/styling#the-css-property: "The stylesheets will be inlined in the HTML rendered by Nuxt, injected globally and present in all pages."
+  - https://nuxt.com/docs/getting-started/styling#stylesheets-distributed-through-npm: `export default defineNuxtConfig({ css: ['animate.css'] })`
 
 ## Snippets
 

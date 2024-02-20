@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --open",
     "format:code": "prettier . --write",
     "format:pkgJson": "sort-package-json",
     "format": "run-s format:pkgJson format:code",
