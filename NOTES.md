@@ -499,3 +499,7 @@ npm install nuxt vue vue-router resetss && npm install -D npm-run-all2 prettier 
 ```bash
 npx nuxi@latest init test
 ```
+
+```bash
+rm -rf node_modules/ && npm install
+```
