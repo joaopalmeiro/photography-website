@@ -493,7 +493,7 @@ export default defineNuxtConfig({
 ## Commands
 
 ```bash
-npm install nuxt vue vue-router resetss && npm install -D npm-run-all2 prettier sort-package-json
+npm install nuxt vue vue-router resetss && npm install -D npm-run-all2 prettier @joaopalmeiro/prettier-vue-config sort-package-json
 ```
 
 ```bash
@@ -502,4 +502,8 @@ npx nuxi@latest init test
 
 ```bash
 rm -rf node_modules/ && npm install
+```
+
+```bash
+npx prettier . --check --log-level debug
 ```
