@@ -112,6 +112,7 @@
 - Global styling:
   - https://nuxt.com/docs/getting-started/styling#the-css-property: "The stylesheets will be inlined in the HTML rendered by Nuxt, injected globally and present in all pages."
   - https://nuxt.com/docs/getting-started/styling#stylesheets-distributed-through-npm: `export default defineNuxtConfig({ css: ['animate.css'] })`
+- https://content.nuxt.com/usage/markdown#images
 
 ## Snippets
 
@@ -317,6 +318,13 @@ export default defineNuxtConfig({
 })
 ```
 
+```ts
+export default defineNuxtConfig({
+  devtools: { enabled: false },
+  css: ['resetss/destyle.css']
+})
+```
+
 #### `components/InternalLink.vue`
 
 ```vue
@@ -488,6 +496,14 @@ export default defineNuxtConfig({
     </div>
   </main>
 </template>
+```
+
+#### `utils/getNextImageId.ts`
+
+```ts
+export default function (currentValue: number, offset: number, maxValue: number, minValue = 1): number {
+  return ((currentValue - minValue + (offset % maxValue) + maxValue) % maxValue) + minValue
+}
 ```
 
 ## Commands

@@ -1,8 +1,8 @@
-# photography-website
+# photography-notes-website
 
-> https://joao.pics/
+> https://notes.joao.pics/
 
-My photography portfolio.
+Personal notes on photography.
 
 ## Development
 
